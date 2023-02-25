@@ -10,7 +10,7 @@ const inquirer = require('inquirer');
 
 
 // test point  ------------------------------------------------
-const generateMarkdown = answers => {
+const generateTest = answers => {
     return (
       ` 
        <!DOCTYPE html>
@@ -98,7 +98,7 @@ inquirer
 
 // testpoint - basic functionality 
 .then ((answers) => {
-    const fileContents = generateMarkdown (answers);
+    const fileContents = generateTest (answers);
     console.log(answers)
     let filename = 'test.html';
 
