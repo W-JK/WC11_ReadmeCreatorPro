@@ -4,6 +4,7 @@ const fs = require('fs');
 // const path = require('path'); // part of source code - commented for test 
 
 // required part - importing preinstalled "inquirer" 
+// source https://www.npmjs.com/package/inquirer/v/8.2.5 and documentation 
 const inquirer = require('inquirer');
 // coment for test:  const generateMarkdown = require("./utils/generateMarkdown");
 //  coment for test: const util = require('util'); // linking utils folder
