@@ -5,6 +5,47 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
+    //The title of my project
+    // When a user enters the project title, it's displayed as the title of the README.
+
+
+    //Sections entitled:
+
+
+
+    //Description
+
+
+
+    //Table of Contents
+
+
+
+    //Installation
+
+
+
+    // Usage
+
+
+
+    //License
+
+
+
+
+    // Contributing
+
+
+
+    // Tests
+
+
+
+    // Questions
+
+
+
 
 ];
 
