@@ -57,19 +57,59 @@ inquirer
     }    
 },
 
+
+
+
     //Sections entitled:
 
 
 
     //Description -------------------------------------------
 // Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+{
+    type: 'input',
+    name: 'description',
+    message: 'Provide a short description of your project: explaining the what, why, and how .',
+    validate: nameInput => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log('Description of your project is required.Please add one');
+          return false;
+        }
+      }
+    
+},
+
 
     //Table of Contents
 
 
 
     //Installation
+    // Check if the instalation is required
+    {
+        type: 'confirm',
+        name: 'installation',
+        message: 'Is there an installation of the app, or is component required?'
+    },
 
+    // if yes follow - ask user to imput instalation steps (manual) 
+    {
+        type: 'input',
+        name: 'installationSteps',
+        message: 'Please write installation instructions and requirements.',
+        
+        when: ({ installation }) => {
+          if (installation) {
+            return true;
+
+          } else {
+            return false;
+          }
+        }
+    },
+      
 
 
     // Usage
