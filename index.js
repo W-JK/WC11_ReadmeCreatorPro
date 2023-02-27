@@ -6,12 +6,14 @@ const fs = require('fs');
 // required part - importing preinstalled "inquirer" 
 // source https://www.npmjs.com/package/inquirer/v/8.2.5 and documentation 
 const inquirer = require('inquirer');
-const { type } = require('os');
+// const { type } = require('os');    -commented2702
 // coment for test:  const generateMarkdown = require("./utils/generateMarkdown");
 //  coment for test: const util = require('util'); // linking utils folder
 
+const generateMarkdown = require('./utils/generateMarkdown');
+const util = require('util');
 
-// test point  ------------------------------------------------
+/* // test point  ------------------------------------------------
 const generateMarkdown = answers => {
     return (
       ` 
@@ -33,11 +35,15 @@ const generateMarkdown = answers => {
 
          <html>  `  
          )}
-   // test point end --------------------------------------  
+   // test point end --------------------------------------  */
+
+
 
 // ------------- array of questions for user --------------
-inquirer
-.prompt([    // .createPromptModule - replace with .prompt for test 
+/* inquirer
+.prompt([    // .createPromptModule - replace with .prompt for test */
+const answers = [
+
 
     //--------- #<Your-Project-Title> ------------ 
     // When a user enters the project title, it's displayed as the title of the README.
@@ -251,10 +257,10 @@ inquirer
 
 
 
-])
+] // ) - test
 
 
-// testpoint - basic functionality 
+/* testpoint - basic functionality 
 .then ((answers) => {
     const fileContents = generateMarkdown (answers);
     console.log(answers)
@@ -264,7 +270,7 @@ inquirer
     err ? console.log(err) : console.log('Answers Test Succesfull !') );
     
            
-  });
+  }); */
 
 
 
@@ -274,9 +280,10 @@ inquirer
     // --------------- chalenge starter file ------------ 
 
 
-/*
 
-// function to write README file
+
+// function to write README file /*
+
  function writeToFile(DemoREADME, data) {  
     fs.writeFile(DemoREADME,data,error => {
         if (error) {
@@ -291,21 +298,21 @@ const createPromptModule = util.promisify(writeToFile);
    // function init() { } // chalenge code 
    async function init() {
     try { 
-        const userAnswers = inquirer.createPromptModule(answers) 
+        const userAnswers =   await inquirer.prompt(answers);                                              // inquirer.createPromptModule(answers) -testpoint
         console.log('Please wait until data is processed and your DemoREaadme is created', userAnswers);
         const myMarkdown = generateMarkdown(userAnswers);
         console.log(myMarkdown);
         await createReadMe('DemoREADME.md', myMarkdown);   // can be other name - nice to have: adding Project Title to readme name
     
     } catch (error) {
-        console.log('Sorry, something went wrong:' + '/n error:' + error + '/n lets try again!');
+        console.log('Sorry, something went wrong:' + ' error:' + error + ' lets try again!');
     }
     };
-})
+// }) -testpoint
 
 
 // function call to initialize program
 init(); // chalenge starter code
 
 
-*/  // comment out for test - end
+  // comment out for test - end */
