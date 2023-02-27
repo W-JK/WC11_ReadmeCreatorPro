@@ -1,6 +1,8 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
 
+
+  // ------------------------------ licences
   let licenseOption = `${data.license}`;
   let licenseLink = '';
   // ---------------- assigning correct badge link to the chosen licence ---------------- 
@@ -44,7 +46,7 @@ function generateMarkdown(data) {
     licenseOption = 'BoostSoftwareLicense1.0';
     licenseLink = 'https://choosealicense.com/licenses/bsl-1.0/';
   };
-  
+  // licences end - to be removed later ---------------------
   
   
 
@@ -167,11 +169,11 @@ markdownTemplate +=
 ##Licence
   
 Licensed under the ${data.license}. 
-For more information please view the [license description](${licenseLink}).
+For more information please view the [license description](${licenseLink}). 
 
-![badge](https://img.shields.io/badge/license-${licenseOption}-brightorange)   
+![badge](https://img.shields.io/badge/license-TheUnlicense-brightorange)   
 You can access more badges and their purposes at [shields.io](https://shields.io)
-` // badge link 
+` // badge link ${licenseOption}
 
 
 
