@@ -6,6 +6,7 @@ const fs = require('fs');
 // required part - importing preinstalled "inquirer" 
 // source https://www.npmjs.com/package/inquirer/v/8.2.5 and documentation 
 const inquirer = require('inquirer');
+const { type } = require('os');
 // coment for test:  const generateMarkdown = require("./utils/generateMarkdown");
 //  coment for test: const util = require('util'); // linking utils folder
 
@@ -41,7 +42,8 @@ inquirer
     //--------- #<Your-Project-Title> ------------ 
     // When a user enters the project title, it's displayed as the title of the README.
 
-{ // adding title -------------------------------------
+{ // ------------------------ Title -----------------------------------------------------------------------------------
+
     type: 'imput',
     name: 'title',
     mesage: 'Please add title to your repository',
@@ -51,7 +53,7 @@ inquirer
         } 
 
         else{
-            console.log('Project title is Required'+ '/nPlease NAME your project')
+            console.log('Project title is Required' + '/nPlease NAME your project')
             return false;
         }
     }    
@@ -64,7 +66,8 @@ inquirer
 
 
 
-    //Description -------------------------------------------
+    //--------------------------- Description -----------------------------------------------------------------------------
+
 // Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 {
     type: 'input',
@@ -87,7 +90,7 @@ inquirer
 
 
 
-    //Installation --------------------------------------------
+    //------------------------------- Installation requirements --------------------------------------------
     // Check if the instalation is required
     {
         type: 'confirm',
@@ -95,7 +98,7 @@ inquirer
         message: 'Is there an installation of the app, or is component required?'
     },
 
-    // if yes follow - ask user to imput instalation steps (manual) 
+    // ------ if yes follow - ask user to imput instalation steps (manual) ------------------
     {
         type: 'input',
         name: 'installationSteps',
@@ -113,7 +116,7 @@ inquirer
       
 
 
-    // -------------- Usage --------------------------
+    // -------------- Usage ---------------------------------------------------------------------------------
     { 
         type: 'imput',
         name:'usage',
@@ -122,7 +125,7 @@ inquirer
     },
 
 
-    // -------------- License -----------------------
+    // -------------- License ----------------------------------------------------------------------------------
 
     {
 
@@ -145,15 +148,59 @@ inquirer
 
 
 
-    // Contributing
+    // ------------------ Contributing ------------------------------------------------------------
+    {
+        type: 'confirm',
+        name: 'contribution',
+        message: 'Would you like to create your own contribution "Code_Of_Conduct" '
+
+    },
+
+    {
+        type: 'input',
+        name: 'ownContribution',
+        message: 'Please write "Contributions "Code_Of_Conduct" and requirements  to communicate how people should contribute to your project.',
+        
+        when: ({ ownContribution }) => {
+          if (ownContribution) {
+            return true;
+
+          } else {
+            console.log('To help your project contributors do good work, fell free to use default Code_Of_Conduct, with contribution guidelines and add it to your project repository')
+            return false;
+          }
+        }
+    },
+
+
+    // -----------------   Tests --------------------------------------------------------------------------------------------
+    {
+    type: 'confirm',
+    name: 'test',
+    message: 'Would you allow users to test your application'
+    },
+        // ------ if yes follow - ask user to imput testing steps (manual) ------------------   
+        {
+            type: 'imput',
+            name: 'testingSolution',
+            message: 'Please write test guide',
+            when: ({ test }) => {
+                if (test) {
+                return true;
+                } else {
+                return false;
+                }
+            }
+            
+
+        },
 
 
 
-    // Tests
 
 
+    // ------------------ Questions ------------------------------------------------------------------------------------------
 
-    // Questions ------------------ 
         // ------------ required contact informations ----------- 
         {
             type: 'input',
@@ -192,7 +239,7 @@ inquirer
     {
         type: 'input',
         name: 'questions',
-        message: 'Please add Contact informations.',
+        message: 'Please advice user how to Contact you.',
         validate: (nameInput) => {
           if (nameInput) {
             return true;
