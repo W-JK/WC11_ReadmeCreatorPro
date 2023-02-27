@@ -6,8 +6,8 @@ const path = require('path'); // part of the chalenge source code
 // required part - importing preinstalled "inquirer" 
 // source https://www.npmjs.com/package/inquirer/v/8.2.5 and documentation 
 const inquirer = require('inquirer');
-const { type } = require('os');  
- const generateMarkdown = require("./utils/generateMarkdown"); 
+//const { type } = require('os');  
+ const generateMarkdown = require('./utils/generateMarkdown'); 
  const util = require('util'); // linking utils folder 
 
 
@@ -23,14 +23,14 @@ const answers = [
 
     type: 'imput',
     name: 'title',
-    mesage: 'Please add title to your repository',
+    mesage: 'Please add title to your repository(Required)',
     validate: ProjectTitleInput =>{ 
         if (ProjectTitleInput) {
             return true; 
         } 
 
         else{
-            console.log('Project title is Required' + '/nPlease NAME your project')
+            console.log('Project title is Required' + 'Please NAME your project')
             return false;
         }
     }    
@@ -103,7 +103,7 @@ const answers = [
 
     type: 'checkbox',
     name: 'license',
-    message: 'A license tells others what they can and cannot do with your code.Please choose a license.',
+    message: 'A license tells others what they can and cannot do with your code.Please choose a license.(Required)',
     choices: ['The Unlicense','MIT License','GNU AGPLv3', 'GNU GPLv3',
         'GNU LGPLv3', 'Mozilla Public License 2.0',
         'Apache License 2.0',  'Boost Software License 1.0'],
@@ -243,17 +243,20 @@ const answers = [
 
 // function to initialize program
 
-const createPromptModule = util.promisify(writeToFile);
+const createDemoREADME = util.promisify(writeToFile);
    // function init() { } // chalenge code 
    async function init() {
     try { 
         const userAnswers =   await inquirer.prompt(answers);                                              
         console.log('Please wait until data is processed and your DemoREaadme is created', userAnswers);
         const myMarkdown = generateMarkdown(userAnswers);
+        
         console.log(myMarkdown);
-        await createReadMe('DemoREADME.md', myMarkdown);   // can be other name - nice to have: adding Project Title to readme name
+        await createDemoREADME('DemoREADME.md', myMarkdown);   // can be other name - nice to have: adding Project Title to readme name
     
-    } catch (error) {
+    } 
+    
+    catch (error) {
         console.log('Sorry, something went wrong:' + ' error:' + error + ' lets try again!');
     }
     };
