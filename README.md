@@ -16,7 +16,7 @@ Code can also be accessed also on Git Hub from the below repository:
 https://github.com/W-JK/WC11_ReadmeCreatorPro.git
 
 
-![markdown screenshot video](./assets/WC11_ReadmeCreatorPro - Visual Studio Code 2023-02-28 22-40-02.mp4)
+[![markdown video]]({./assets/Markdown-DemoVideo.mp4} "Readme Creator Demo")
 
 
 
