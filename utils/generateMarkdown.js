@@ -1,7 +1,7 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
 
-
+/*
   // ------------------------------ licences
   let licenseOption = `${data.license}`;
   let licenseLink = '';
@@ -48,7 +48,7 @@ function generateMarkdown(data) {
   };
   // licences end - to be removed later ---------------------
   
-  
+  */
 
 
 
@@ -163,7 +163,7 @@ GitHub: [${data.GitName}](https://github.com/${data.GitName})
 Email:  [${data.email}](mailto:${data.email})`; 
 
 
-
+/*
 markdownTemplate +=
 ` 
 ##Licence
@@ -179,6 +179,7 @@ You can access more badges and their purposes at [shields.io](https://shields.io
 
 ` Part of the source code supplied and liceced under : `
 ` © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved. `;
+*/
 
 return markdownTemplate;
 
