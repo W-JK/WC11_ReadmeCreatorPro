@@ -5,48 +5,48 @@ function generateMarkdown(data) {
   // ------------------------------ licences
   let licenseOption = `${data.license}`;
   let licenseLink = '';
-  // ---------------- assigning correct badge link to the chosen licence ---------------- 
-  // licence badges:  https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+    // ---------------- assigning correct badge link to the chosen licence ---------------- 
+  // collection of licence badges:  
   if (licenseOption === 'The Unlicense') {
-    licenseOption = 'The_Unlicense';
-    licenseLink = 'https://choosealicense.com/licenses/unlicense/';
+    licenseBadge = '![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)';
+    licenseLink = 'http://unlicense.org/';
   };
   
   if (licenseOption === 'MIT License') {
-    licenseOption = 'MIT_License';
-    licenseLink =   'https://img.shields.io/bower/l/js?style=for-the-badge'                               // 'https://choosealicense.com/licenses/mit/';
+    licenseBadge = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
+    licenseLink =   'https://opensource.org/licenses/MIT'                               // 'https://choosealicense.com/licenses/mit/';
   };
   
   if (licenseOption === 'GNU AGPLv3') {
-    licenseOption = 'GNU_AGPLv3';
-    licenseLink = 'https://choosealicense.com/licenses/agpl-3.0/';
+    licenseBadge = '![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)';
+    licenseLink = 'https://www.gnu.org/licenses/agpl-3.0';
   };
   
   if (licenseOption === 'GNU GPLv3') {
-    licenseOption = 'GNU_GPLv3';
-    licenseLink = 'https://choosealicense.com/licenses/gpl-3.0/';
+    licenseBadge = '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)';
+    licenseLink = 'https://www.gnu.org/licenses/gpl-3.0';
   };
   
   if (licenseOption === 'GNU LGPLv3') {
-    licenseOption = 'GNU_LGPLv3';
-    licenseLink = 'https://choosealicense.com/licenses/lgpl-3.0/';
+    licenseBadge = '![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)';
+    licenseLink = 'https://opensource.org/licenses/MPL-2.0';
   };
   
   if (licenseOption === 'Mozilla Public License 2.0') {
-    licenseOption = 'Mozilla_PublicLicense_2.0';
-    licenseLink = 'https://choosealicense.com/licenses/mpl-2.0/';
+    licenseBadge = '![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)';
+    licenseLink = 'https://opensource.org/licenses/MPL-2.0';
   };
   
   if (licenseOption === 'Apache License 2.0') {
-    licenseOption = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]';
-    licenseLink = '(https://opensource.org/licenses/Apache-2.0)';
+    licenseBadge = '![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)';
+    licenseLink = 'https://opensource.org/licenses/Apache-2.0';
   };
   
   if (licenseOption === 'Boost Software License 1.0') {
-    licenseOption = 'Boost_Software_License_1.0';
-    licenseLink = 'https://choosealicense.com/licenses/bsl-1.0/';
+    licenseBadge = '![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)';
+    licenseLink = 'https://www.boost.org/LICENSE_1_0.txt';
   };
-  // licences end - to be removed later ---------------------
+  // --------------- licences end  ---------------------
   
   
 
@@ -54,7 +54,7 @@ function generateMarkdown(data) {
 
   
 let markdownTemplate =                  // variable to hold markdown template and add data to it
-// collecting title input !remember ` not ' ! ${data.} ; ${licenseOption} if left in this same file
+
 
 ` 
 # ${data.title}  
@@ -62,21 +62,7 @@ let markdownTemplate =                  // variable to hold markdown template an
 ## Description
 ${data.description}
 
-${licenseOption}
-
-${licenseLink}
-
-
-// ![badge](https://img.shields.io/badge/license-${licenseOption}-green)
-
- 
-
-
-
-
-
-
-
+${licenseBadge} ${licenseLink}
 
 `;
   
@@ -195,18 +181,12 @@ markdownTemplate +=
 ` 
 ##Licence
   
-Licensed under the ${data.license}. 
-For more information please view the [license description](${licenseLink}). 
+Licensed under the ${licenseOption}. 
+For more information please view the (${licenseLink}). 
 
-![badge](https://img.shields.io/badge/license-TheUnlicense-brightorange)   
-You can access more badges and their purposes at [shields.io](https://shields.io)
-` // badge link ${licenseOption}
+Part of the source code supplied and liceced under : 
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved. `;
 
-/*
-
-` Part of the source code supplied and liceced under : `
-` © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved. `;
-*/
 
 return markdownTemplate;
 
