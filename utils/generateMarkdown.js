@@ -1,7 +1,7 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
 
-/*
+
   // ------------------------------ licences
   let licenseOption = `${data.license}`;
   let licenseLink = '';
@@ -14,7 +14,7 @@ function generateMarkdown(data) {
   
   if (licenseOption === 'MIT License') {
     licenseOption = 'MITLicense';
-    licenseLink = 'https://choosealicense.com/licenses/mit/';
+    licenseLink =   'https://img.shields.io/bower/l/js?style=for-the-badge'                               // 'https://choosealicense.com/licenses/mit/';
   };
   
   if (licenseOption === 'GNU AGPLv3') {
@@ -48,56 +48,74 @@ function generateMarkdown(data) {
   };
   // licences end - to be removed later ---------------------
   
-  */
+  
 
 
 
   
 let markdownTemplate =                  // variable to hold markdown template and add data to it
 // collecting title input !remember ` not ' ! ${data.} ; ${licenseOption} if left in this same file
+
 ` 
 # ${data.title}  
 
 ## Description
 ${data.description}
 
+![Bower](https://img.shields.io/bower/l/js?style=for-the-badge)
 
-`
+ 
+
+
+
+
+
+
+
+
+`;
   
- //  return `# ${data.title} `; part of starter code (add or remove later)
+ 
 
  // ----------------------- Table of Contents --------------------------------------------------
 
  let tableOfContents =
  `
  ## Table of Contents`;
-   if (data.installation) {
+
+  if (data.installation) {
      tableOfContents +=
-       ` * [Installation](#installation)`
+      ` 
+      * [Installation](#installation)`
   };
 
   if (data.usage) {
     tableOfContents +=
-      ` * [Usage](#usage)`
+      ` 
+      * [Usage](#usage)`
   };
 
   if (data.contribution) {
     tableOfContents +=
-      ` * [Contribution](#contribution)`
+      ` 
+      * [Contribution](#contribution)`
   };
 
   if (data.testingSolution) {
     tableOfContents +=
-      `  * [Testing Solution](#Testing Solution)`
+      ` 
+      * [Testing Solution](#Testing Solution)`
   };
 
-  markdownTemplate +=
-  `  * [Questions](#questions)`;
+  tableOfContents +=
+      ` 
+      * [Questions](#questions)`;
   
   
   
-  markdownTemplate +=
-  ` * [License](#license)`; 
+  tableOfContents +=
+      `
+      * [License](#license)`; 
 
 
 
@@ -112,7 +130,8 @@ ${data.description}
 
 if (data.installation) {
     markdownTemplate +=
-` ## Installation
+`
+## Installation
     
   To install application below steps are required:
   ${data.installationSteps}`
@@ -121,7 +140,8 @@ if (data.installation) {
   //----------------------- Usage guide section  ----------------------------------------------------
   if (data.usage) {
     markdownTemplate +=
-` ## Usage
+` 
+## Usage
 
   Instructions for use:
   ${data.usage}`
@@ -130,7 +150,8 @@ if (data.installation) {
   // ----------------------- Contribution section --------------------------------------------------
   if (data.ownContribution) {
     markdownTemplate +=
-` ## Contribution
+` 
+## Contribution
   If you would like to contribute, please adhere to the Code_Of_Conduct:
   ${data.ownContribution}`
     };
@@ -141,7 +162,8 @@ if (data.installation) {
   // -------------------------- Test section -------------------------------------------------------
   if (data.test) {
     markdownTemplate +=
-` ## Testing
+`
+## Testing
   If you would like to test application; please follow those steps:
   ${data.test}`
   };
@@ -163,7 +185,7 @@ GitHub: [${data.GitName}](https://github.com/${data.GitName})
 Email:  [${data.email}](mailto:${data.email})`; 
 
 
-/*
+
 markdownTemplate +=
 ` 
 ##Licence
@@ -175,7 +197,7 @@ For more information please view the [license description](${licenseLink}).
 You can access more badges and their purposes at [shields.io](https://shields.io)
 ` // badge link ${licenseOption}
 
-
+/*
 
 ` Part of the source code supplied and liceced under : `
 ` © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved. `;
