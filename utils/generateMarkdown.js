@@ -79,36 +79,36 @@ ${licenseBadge} ${licenseLink};
   if (data.installation) {
      tableOfContents +=
       ` 
-      * Installation: (#installation)`
+      - [ Installation:](#installation)`
   };
 
   if (data.usage) {
     tableOfContents +=
       ` 
-      * Usage: (#usage)`
+      - [Usage:](#usage)`
   };
 
   if (data.contribution) {
     tableOfContents +=
       ` 
-      * Contribution: (#contribution)`
+      - [Contribution:](#contribution)`
   };
 
   if (data.testingSolution) {
     tableOfContents +=
       ` 
-      * Testing Solution: (#Testing Solution)`
+      - [Testing Solution:](#Testing Solution)`
   };
 
   tableOfContents +=
       ` 
-      * Questions: (#questions)`;
+      - [Questions:](#questions)`;
   
   
   
   tableOfContents +=
       `
-      * License: (#license)
+      - [License:](#license)
       
       `; 
 
@@ -188,8 +188,9 @@ markdownTemplate +=
 ` 
 ## Licence
   
-Licensed under the ${licenseOption}. 
-For more information please view the (${licenseLink}). 
+Licensed under the: ${licenseOption} license. 
+For more information please review documentation provided under below link:
+(${licenseLink}). 
 
 Part of the source code supplied and liceced under : 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved. `;
