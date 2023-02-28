@@ -6,7 +6,7 @@ const path = require('path'); // part of the chalenge source code
 // required part - importing preinstalled "inquirer" 
 // source https://www.npmjs.com/package/inquirer/v/8.2.5 and documentation 
 const inquirer = require('inquirer');
-//const { type } = require('os');  
+ 
  const generateMarkdown = require('./utils/generateMarkdown'); 
  const util = require('util'); // linking utils folder 
 
@@ -111,7 +111,7 @@ const answers = [
         if (nameInput) {
         return true;
         } else {
-        console.log('Please select a license.');        //note:  or add 'The Unlicense' default (?)
+        console.log('Please select a license.');        
         return false;
         }
     }
@@ -200,7 +200,7 @@ const answers = [
                   return false;
                 }
               }                
-              //note:  nice to have - validation of email (if the email is valid ("@" check))
+              
           },
 
 
@@ -226,7 +226,7 @@ const answers = [
 ] 
 
 
-    // --------------- chalenge starter file ------------ 
+    // --------------- chalenge starter code ------------ 
 
 
 
@@ -244,7 +244,7 @@ const answers = [
 // function to initialize program
 
 const createDemoREADME = util.promisify(writeToFile);
-   // function init() { } // chalenge code 
+   
    async function init() {
     try { 
         const userAnswers =   await inquirer.prompt(answers);                                              
@@ -264,5 +264,5 @@ const createDemoREADME = util.promisify(writeToFile);
 
 
 // function call to initialize program
-init(); // chalenge starter code
+init(); 
 
