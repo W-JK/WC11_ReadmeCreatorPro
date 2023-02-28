@@ -79,36 +79,38 @@ ${licenseBadge} ${licenseLink};
   if (data.installation) {
      tableOfContents +=
       ` 
-      * [Installation](##installation)`
+      * Installation: (#installation)`
   };
 
   if (data.usage) {
     tableOfContents +=
       ` 
-      * [Usage](##usage)`
+      * Usage: (#usage)`
   };
 
   if (data.contribution) {
     tableOfContents +=
       ` 
-      * [Contribution](##contribution)`
+      * Contribution: (#contribution)`
   };
 
   if (data.testingSolution) {
     tableOfContents +=
       ` 
-      * [Testing Solution](##Testing Solution)`
+      * Testing Solution: (#Testing Solution)`
   };
 
   tableOfContents +=
       ` 
-      * [Questions](##questions)`;
+      * Questions: (#questions)`;
   
   
   
   tableOfContents +=
       `
-      * [License](##license)`; 
+      * License: (#license)
+      
+      `; 
 
 
 
