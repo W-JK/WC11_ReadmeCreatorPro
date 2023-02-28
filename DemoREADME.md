@@ -1,46 +1,32 @@
  
-# dagsd  
+# asjghersowpat  
 
 ## Description
-asdgfg
+gssfdh
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]
-
-(https://opensource.org/licenses/Apache-2.0)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) https://opensource.org/licenses/MIT;
 
 
-// ![badge](https://img.shields.io/badge/license-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]-green)
-
- 
-
-
-
-
-
-
-
-
-
- ## Table of Contents 
-      * [Usage](#usage) 
-      * [Questions](#questions)
-      * [License](#license) 
+## Table of Contents: 
+      * [Usage](##usage) 
+      * [Questions](##questions)
+      * [License](##license) 
 ## Usage
 
   Instructions for use:
-  sadgf
- ## Questions 
+  fgd
+## Questions 
 
 Please not hesitate to reach me under:
-dsf
+dghs
 
 Contact Details: 
-GitHub: [dfs](https://github.com/dfs)
-Email:  [fds](mailto:fds) 
-##Licence
+  ### GitHub: [dfsgd](https://github.com/dfsgd)
+  ### Email:  [dgs](mailto:dgs) 
+## Licence
   
-Licensed under the Apache License 2.0. 
-For more information please view the [license description]((https://opensource.org/licenses/Apache-2.0)). 
+Licensed under the MIT License. 
+For more information please view the (https://opensource.org/licenses/MIT). 
 
-![badge](https://img.shields.io/badge/license-TheUnlicense-brightorange)   
-You can access more badges and their purposes at [shields.io](https://shields.io)
+Part of the source code supplied and liceced under : 
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved. 

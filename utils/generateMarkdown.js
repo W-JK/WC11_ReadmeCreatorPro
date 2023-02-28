@@ -4,7 +4,9 @@ function generateMarkdown(data) {
 
   // ------------------------------ licences
   let licenseOption = `${data.license}`;
+  let licenseBadge = '';
   let licenseLink = '';
+  
     // ---------------- assigning correct badge link to the chosen licence ---------------- 
   // collection of licence badges:  
   if (licenseOption === 'The Unlicense') {
@@ -62,7 +64,7 @@ let markdownTemplate =                  // variable to hold markdown template an
 ## Description
 ${data.description}
 
-${licenseBadge} ${licenseLink}
+${licenseBadge} ${licenseLink};
 
 `;
   
@@ -72,41 +74,41 @@ ${licenseBadge} ${licenseLink}
 
  let tableOfContents =
  `
- ## Table of Contents`;
+## Table of Contents:`;
 
   if (data.installation) {
      tableOfContents +=
       ` 
-      * [Installation](#installation)`
+      * [Installation](##installation)`
   };
 
   if (data.usage) {
     tableOfContents +=
       ` 
-      * [Usage](#usage)`
+      * [Usage](##usage)`
   };
 
   if (data.contribution) {
     tableOfContents +=
       ` 
-      * [Contribution](#contribution)`
+      * [Contribution](##contribution)`
   };
 
   if (data.testingSolution) {
     tableOfContents +=
       ` 
-      * [Testing Solution](#Testing Solution)`
+      * [Testing Solution](##Testing Solution)`
   };
 
   tableOfContents +=
       ` 
-      * [Questions](#questions)`;
+      * [Questions](##questions)`;
   
   
   
   tableOfContents +=
       `
-      * [License](#license)`; 
+      * [License](##license)`; 
 
 
 
@@ -143,6 +145,7 @@ if (data.installation) {
     markdownTemplate +=
 ` 
 ## Contribution
+
   If you would like to contribute, please adhere to the Code_Of_Conduct:
   ${data.ownContribution}`
     };
@@ -155,6 +158,7 @@ if (data.installation) {
     markdownTemplate +=
 `
 ## Testing
+
   If you would like to test application; please follow those steps:
   ${data.test}`
   };
@@ -166,20 +170,21 @@ if (data.installation) {
 
 markdownTemplate += 
 `
- ## Questions 
+## Questions 
 
 Please not hesitate to reach me under:
 ${data.questions}
 
 Contact Details: 
-GitHub: [${data.GitName}](https://github.com/${data.GitName})
-Email:  [${data.email}](mailto:${data.email})`; 
 
-
+  ### GitHub: [${data.GitName}](https://github.com/${data.GitName})
+  ### Email:  [${data.email}](mailto:${data.email})
+  
+  `; 
 
 markdownTemplate +=
 ` 
-##Licence
+## Licence
   
 Licensed under the ${licenseOption}. 
 For more information please view the (${licenseLink}). 

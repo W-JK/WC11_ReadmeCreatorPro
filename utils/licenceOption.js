@@ -2,7 +2,7 @@
   let licenseOption = `${data.license}`;
   let licenseLink = '';
   // ---------------- assigning correct badge link to the chosen licence ---------------- 
-  // licence badges:  https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+  // licence badges:  
   if (licenseOption === 'The Unlicense') {
     licenseBadge = '![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)';
     licenseLink = 'http://unlicense.org/';
@@ -10,7 +10,7 @@
   
   if (licenseOption === 'MIT License') {
     licenseBadge = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
-    licenseLink =   'https://opensource.org/licenses/MIT'                               // 'https://choosealicense.com/licenses/mit/';
+    licenseLink =   'https://opensource.org/licenses/MIT'                               
   };
   
   if (licenseOption === 'GNU AGPLv3') {
