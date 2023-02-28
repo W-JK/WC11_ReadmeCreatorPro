@@ -8,42 +8,42 @@ function generateMarkdown(data) {
   // ---------------- assigning correct badge link to the chosen licence ---------------- 
   // licence badges:  https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
   if (licenseOption === 'The Unlicense') {
-    licenseOption = 'TheUnlicense';
+    licenseOption = 'The_Unlicense';
     licenseLink = 'https://choosealicense.com/licenses/unlicense/';
   };
   
   if (licenseOption === 'MIT License') {
-    licenseOption = 'MITLicense';
+    licenseOption = 'MIT_License';
     licenseLink =   'https://img.shields.io/bower/l/js?style=for-the-badge'                               // 'https://choosealicense.com/licenses/mit/';
   };
   
   if (licenseOption === 'GNU AGPLv3') {
-    licenseOption = 'GNUAGPLv3';
+    licenseOption = 'GNU_AGPLv3';
     licenseLink = 'https://choosealicense.com/licenses/agpl-3.0/';
   };
   
   if (licenseOption === 'GNU GPLv3') {
-    licenseOption = 'GNUGPLv3';
+    licenseOption = 'GNU_GPLv3';
     licenseLink = 'https://choosealicense.com/licenses/gpl-3.0/';
   };
   
   if (licenseOption === 'GNU LGPLv3') {
-    licenseOption = 'GNULGPLv3';
+    licenseOption = 'GNU_LGPLv3';
     licenseLink = 'https://choosealicense.com/licenses/lgpl-3.0/';
   };
   
   if (licenseOption === 'Mozilla Public License 2.0') {
-    licenseOption = 'MozillaPublicLicense2.0';
+    licenseOption = 'Mozilla_PublicLicense_2.0';
     licenseLink = 'https://choosealicense.com/licenses/mpl-2.0/';
   };
   
   if (licenseOption === 'Apache License 2.0') {
-    licenseOption = 'ApacheLicense2.0';
-    licenseLink = 'https://choosealicense.com/licenses/apache-2.0/';
+    licenseOption = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]';
+    licenseLink = '(https://opensource.org/licenses/Apache-2.0)';
   };
   
   if (licenseOption === 'Boost Software License 1.0') {
-    licenseOption = 'BoostSoftwareLicense1.0';
+    licenseOption = 'Boost_Software_License_1.0';
     licenseLink = 'https://choosealicense.com/licenses/bsl-1.0/';
   };
   // licences end - to be removed later ---------------------
