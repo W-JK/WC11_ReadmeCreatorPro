@@ -62,7 +62,8 @@ let markdownTemplate =                  // variable to hold markdown template an
 ## Description
 ${data.description}
 
-![Bower](https://img.shields.io/bower/l/js?style=for-the-badge)
+
+![badge](https://img.shields.io/badge/license-${licenseOption}-green)
 
  
 
