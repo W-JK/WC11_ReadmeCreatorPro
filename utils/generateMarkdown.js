@@ -62,8 +62,12 @@ let markdownTemplate =                  // variable to hold markdown template an
 ## Description
 ${data.description}
 
+${licenseOption}
 
-![badge](https://img.shields.io/badge/license-${licenseOption}-green)
+${licenseLink}
+
+
+// ![badge](https://img.shields.io/badge/license-${licenseOption}-green)
 
  
 
